@@ -32,3 +32,7 @@ async def create_user(name: str, email: str):
 @app.get("/")
 async def root():
     return "root"
+
+@app.get("/hello")
+async def root():
+    return "hello"
