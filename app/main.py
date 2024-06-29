@@ -26,3 +26,9 @@ async def create_user(name: str, email: str):
     query = users.insert().values(name=name, email=email)
     last_record_id = await database.execute(query)
     return {**{"id": last_record_id}, "name": name, "email": email}
+
+
+
+@app.get("/")
+async def root():
+    return "root"
